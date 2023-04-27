@@ -5,7 +5,7 @@ pipeline {
         stage('Munit Test') {
             steps {
                 echo 'Testing..'
-                mvn 'mvn clean test'
+                bat 'mvn clean test'
             }
         }
         stage('Build') {
