@@ -6,14 +6,6 @@ pipeline {
             steps {
                 echo 'Testing..'
                 bat 'mvn clean test'
-                publishHTML target: [
-                	allowMissig: false,
-                	alwaysLinkToLastBuild: false,
-                	keepAll: true,
-                	reportDir: 'reports',
-                	reportFiles: 'summary.html',
-                	reportName: "Munit Coverage Report"
-                ]
             }
         }
         stage('Build') {
